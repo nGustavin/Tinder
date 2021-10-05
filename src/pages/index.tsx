@@ -6,7 +6,9 @@ const Home: React.FC = () => {
       <Head>
         <title>NextJS template</title>
       </Head>
-
+    <main>
+      <h1>alo</h1>
+    </main>
     </div>
   )
 }

@@ -22,6 +22,8 @@
   --blue-900: #171848; 
 
   --modal-shadow: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.17));
+
+  --input-shadow: 0px 4px 17px rgba(0, 0, 0, 0.07);
 }
 
 @media(max-width: 1080px) {
@@ -30,7 +32,7 @@
   }
 }
 
-@media(max-width: 720px) {
+@media(max-width: 720px) { 
   html{
     font-size: 87.5%;
   }
@@ -42,13 +44,18 @@ body{
   color: var(--blue-900);
 }
 
+h1, h2, h3,h4,span, p{
+  font: 400 1rem "Inter", sans-serif;
+}
+
 body, input, textarea, select, button{
-  font: 400 1rem "Roboto", sans-serif;
+  font: 400 1rem "Inter", sans-serif;
 }
 
 button{
   cursor: pointer;
 }
+
 a{
   color: inherit;
   text-decoration: none;
