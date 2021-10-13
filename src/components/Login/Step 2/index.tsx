@@ -10,7 +10,7 @@ type ModalContainerProps = {
 }
 
 
-export const FirstStepModal:React.FC<ModalContainerProps> = ({buttonAction, children}) => {
+export const SecondStepModal:React.FC<ModalContainerProps> = ({buttonAction, children}) => {
     const variants = {
         hidden: {opacity: 0, x: 400, y: 0},
         enter: {opacity: 1, x: 0, y: 0},
@@ -37,9 +37,9 @@ export const FirstStepModal:React.FC<ModalContainerProps> = ({buttonAction, chil
         animate="enter"
         exit="exit"
        >
-                    <h1>Create Account</h1>
-                   <p>First step you need to create an login </p>
-       </motion.div>
+                    <h1>Tell me a little <br/>
+                        about you</h1>
+                    </motion.div>
                     <main>
                         {children}
                     </main>

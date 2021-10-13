@@ -1,8 +1,9 @@
 import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
+import { InputText } from '../Input/index'
 import { InitialModal } from './Initial'
-import { ModalContainer } from './ModalComponent'
-import { FirstStepContent } from './Step 1'
+import { FirstStepModal } from './Step 1'
+import { SecondStepModal } from './Step 2'
 
 export const Login = () => {
     const [currentStep, setCurrentStep] = useState(0)
@@ -18,21 +19,27 @@ export const Login = () => {
         case 1:
             return(
                 <AnimatePresence>
-                    <ModalContainer 
-                        title="Create Account" 
-                        buttonText="Next" 
-                        buttonAction={() => setCurrentStep(0)}
-                        description="First step you need 
-                        to create an login "
-                    >
-                        <FirstStepContent/>
-                    </ModalContainer>
+                    <FirstStepModal buttonAction={() => setCurrentStep(self => self + 1)}>
+                        <InputText placeholder="Email" type="text"/>
+                        <InputText placeholder="Password" type="password"/>
+                    </FirstStepModal>
                 </AnimatePresence>
             )
         case 2:
             return(
                 <AnimatePresence>
-                    <h1>step 2</h1>
+                    <SecondStepModal buttonAction={() => setCurrentStep(self => self + 1)}>
+                        <div
+                            style={{
+                                display: 'flex',
+                                gap: '2rem'
+                            }}
+                        >
+                            <InputText placeholder="Name" type="text"/>
+                            <InputText placeholder="age" type="text" style={{width: '7rem'}}/>
+                        </div>
+                        <InputText placeholder="Bio" type="text" style={{height: '10rem'}} textarea/>
+                    </SecondStepModal>
                 </AnimatePresence>
             )
             case 3:
