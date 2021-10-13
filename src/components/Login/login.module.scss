@@ -1,0 +1,17 @@
+@import '../../styles/scrollbar-style.scss';
+
+.tagContainer{
+    background: var(--gray-100);
+    box-shadow: var(--input-shadow);
+    display: grid;
+    grid-template-rows: masonry;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-flow: row;
+    max-height: 20rem;
+    overflow-y: scroll;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    @include custom-scroll-bar();
+}

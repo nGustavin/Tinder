@@ -1,3 +1,29 @@
 @mixin custom-scroll-bar() {
-    
-  }
+  &::-webkit-scrollbar {
+        height: 90%;
+        margin-top: 1rem;
+        width: 0.5rem;
+        cursor: pointer;
+      }
+  
+      &::-webkit-scrollbar-track {
+        background: none;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        cursor: pointer;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background: var(--pink-500);
+        border-radius: 40px;
+        margin-top: 1rem;
+        cursor: pointer;
+  
+        &:hover {
+            background: var(--pink-500);
+        }
+  
+        &:active {
+            background: var(--pink-500);
+        }}    
+}
