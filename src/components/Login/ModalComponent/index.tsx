@@ -18,7 +18,6 @@ export const ModalContainer: React.FC<ModalContainerProps> = ({title, buttonText
         exit: {opacity: 0, x: -500, y: 0},
     }
 
-
     return (
         <motion.div 
             variants={variants}
@@ -27,8 +26,10 @@ export const ModalContainer: React.FC<ModalContainerProps> = ({title, buttonText
             exit="exit"
             className={styles.ModalContainer}
         >
-        <h1>{title}</h1>
+       <div>
+                    <h1>{title}</h1>
                     {description && <p>{description}</p>}
+       </div>
                     <main>
                     {children}
                     </main>

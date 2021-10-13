@@ -1,8 +1,8 @@
-import {AnimatePresence} from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
-import { InputText } from '../Input'
-import {InitialModal} from './Initial'
+import { InitialModal } from './Initial'
 import { ModalContainer } from './ModalComponent'
+import { FirstStepContent } from './Step 1'
 
 export const Login = () => {
     const [currentStep, setCurrentStep] = useState(0)
@@ -21,11 +21,11 @@ export const Login = () => {
                     <ModalContainer 
                         title="Create Account" 
                         buttonText="Next" 
-                        buttonAction={() => null}
+                        buttonAction={() => setCurrentStep(0)}
                         description="First step you need 
                         to create an login "
                     >
-                        <InputText placeholder="Email" type="text"/>
+                        <FirstStepContent/>
                     </ModalContainer>
                 </AnimatePresence>
             )
