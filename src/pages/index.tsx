@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import { NoContentModal } from '../components/LoginModal/NoContent/no-content'
+import { Login } from '../components/Login'
 import styles from './index.module.scss'
 
 const Home: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState(true)
-  const [currentStep, setCurrentStep] = useState<number>(null)
+  const [currentStep, setCurrentStep] = useState<number>(0)
 
   const DataSteps = [
     {
@@ -31,12 +31,9 @@ const Home: React.FC = () => {
       <Head>
         <title>NextJS template</title>
       </Head>
+        
     <main className={styles.backgroundDetail}>
-          <NoContentModal 
-            visible={isModalVisible} 
-            buttonAction={
-              () => {setIsModalVisible(!isModalVisible); setCurrentStep(1)}
-            }/>
+     <Login />
     </main>
     </div>
   )

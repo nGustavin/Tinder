@@ -2,12 +2,12 @@ import styles from './styles.module.scss'
 import {LargeButton} from '../../LargeButton/index'
 import { motion, AnimatePresence } from 'framer-motion'
 
-type NoContentModalProps = {
+type InitialModalProps = {
     visible?: boolean
     buttonAction?: (any) => any;
 }
 
-export const NoContentModal: React.FC<NoContentModalProps> = ({visible = true, buttonAction}) => {
+export const InitialModal: React.FC<InitialModalProps> = ({visible = true, buttonAction}) => {
     const variants = {
         hidden: {opacity: 0, x: 400, y: 0},
         enter: {opacity: 1, x: 0, y: 0},
